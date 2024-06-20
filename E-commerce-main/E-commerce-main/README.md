@@ -34,5 +34,17 @@ O AuthController fornece os seguintes endpoints:
 - GET /vendedor: Acessível a usuários vendedores; retorna informações específicas do vendedor.
 - GET /cliente: Acessível a usuários clientes; retorna informações específicas do cliente.
 
+# Modelos
+A classe LoginRequest representa a carga útil para a requisição de login, contendo um nome de usuário e uma senha.
+
+# Utilitário de Segurança
+A classe JwtUtil fornece métodos para:
+
+Gerar um token JWT para um determinado nome de usuário.
+Extrair o nome de usuário de um token JWT fornecido.
+Extrair o ID de um token JWT fornecido (método não utilizado na implementação atual).
+Serviços
+A classe AuthService atua como intermediária entre o controlador e a classe utilitária, utilizando o JwtUtil para gerar tokens e extrair nomes de usuário de tokens.
+
 ## Diagrama
 ![Captura de tela 2024-06-15 181848](https://github.com/giovanna252gabriela/ecommerce/assets/125416536/dbc28990-db06-40ef-b145-7013deb72c47)
